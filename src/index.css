@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Baloo 2", sans-serif;
+}
+
+:root{
+    --indigo-gradient-50 : linear-gradient(180deg, #fff 0%, #eef2ff 100%);
+    --indigo-gradient-100 : linear-gradient(180deg, #eef2ff 0%, #c7d2fe 100%);
+    --indigo-gradient-200 : linear-gradient(180deg, #e0e7ff 0%, #a5b4fc 100%);
+    --indigo-gradient-300 : linear-gradient(180deg, #c7d2fe 0%, #818cf8 100%);
+    --indigo-gradient-400 : linear-gradient(180deg, #a5b4fc 0%, #6366f1 100%);
+    --indigo-gradient-500 : linear-gradient(180deg, #818cf8 0%, #4f46e5 100%);
+    --indigo-gradient-600 : linear-gradient(180deg, #6366f1 0%, #4338ca 99.99%, #4f46e5 100%);
+    --indigo-gradient-700 : linear-gradient(180deg, #4f46e5 0%, #4338ca 99.99%, #312e81 100%);
+}
+body.dark{
+    --indigo-gradient-50 : linear-gradient(180deg, #fff 0%, #f9fafb 100%, #f9fafb 100%);
+    --indigo-gradient-100 : linear-gradient(180deg, #f9fafb 0%, #e5e7eb 100%);
+    --indigo-gradient-200 : linear-gradient(180deg, #f3f4f6 0%, #d1d5db 100%, #d1d5db 100%);
+    --indigo-gradient-300 : linear-gradient(180deg, #e5e7eb 0%, #9ca3af 100%);
+    --indigo-gradient-400 : linear-gradient(180deg, #d1d5db 0%, #6b7280 100%);
+    --indigo-gradient-500 : linear-gradient(180deg, #9ca3af 0%, #4b5563 100%);
+    --indigo-gradient-600 : linear-gradient(180deg, #6b7280 0%, #374151 99.99%);
+    --indigo-gradient-700 : linear-gradient(180deg, #4b5563 0%, #1f2937 100%);
+}
+
+html,body, body>#root{
+    height: 100%;
+    width: 100%;
+}
+
+.noselect,p,span,h1,h2,h3,h4,div {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
+}
+
+@layer utilities {
+    .bg-indigo-g-100 {
+        background: var(--indigo-gradient-100);
+    }
+    .bg-indigo-g-200 {
+        background: var(--indigo-gradient-200);
+    }
+    .bg-indigo-g-300 {
+        background: var(--indigo-gradient-300);
+    }
+    .bg-indigo-g-400 {
+        background: var(--indigo-gradient-400);
+    }
+    .bg-indigo-g-500 {
+        background: var(--indigo-gradient-500);
+    }
+    .bg-indigo-g-600 {
+        background: var(--indigo-gradient-600);
+    }
+    .bg-indigo-g-700 {
+        background: var(--indigo-gradient-700);
+    }
+    .bg-indigo-g-50 {
+        background: var(--indigo-gradient-50);
+    }
+
+    .text-indigo-g-100 {
+        background: var(--indigo-gradient-100);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-indigo-g-200 {
+        background: var(--indigo-gradient-200);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-indigo-g-300 {
+        background: var(--indigo-gradient-300);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-indigo-g-400 {
+        background: var(--indigo-gradient-400);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-indigo-g-500 {
+        background: var(--indigo-gradient-500);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-indigo-g-600 {
+        background: var(--indigo-gradient-600);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-indigo-g-700 {
+        background: var(--indigo-gradient-700);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-indigo-g-50 {
+        background: var(--indigo-gradient-50);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .fit-parent{
+        width: 100%;
+        height: 100%;
+    }
+    .abs-x-center{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .abs-y-center{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .abs-center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .faint-white{
+        background: rgba(255, 255, 255, 0.055);
+    }
+
+    .card-back-shadow{
+        box-shadow: 0 23px 13px -20px rgba(255, 255, 255, 0.233) , 0 11px 13px -6px #111827 , inset 0 5px 10px 5px rgba(255, 255, 255, 0.089) , inset 0 4px 9px 0 #111827;
+        border: unset;
+    }
+
+    .card-front{
+        background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+        box-shadow: inset 0px 4px 20px -3px #030712;
+    }
+
+    .white-modal-fix{
+        background: theme(colors.gray.800);
+    }
+    .modal-top{
+        background: linear-gradient(180deg, theme(colors.gray.800) 0%, theme(colors.gray.900) 100%) ;
+    }
+}
